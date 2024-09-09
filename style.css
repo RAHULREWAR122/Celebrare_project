@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+.container {
+  font-family: "poppins";
+  max-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  /* transition: all 0.6s; */
+}
+
+.left {
+  width: 0vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  /* transition: all .6s; */
+}
+
+
+.leftPartShow {
+  width: 50vw;
+  /* animation: leftAnim .6s ease-in-out .5s; */
+}
+
+@keyframes leftAnim {
+  0% {
+    visibility: hidden;
+    width: 0vw;
+  }
+  100% {
+    opacity: 0;
+    width: 50vw;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow: hidden;
+}
+.logoImg {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  z-index: 50;
+  top: 50%;
+  left: 50%;
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+  animation: logoAnim 0.6s ease-in-out;
+}
+
+@keyframes logoAnim {
+  0% {
+    top: 50%;
+    left: 50%;
+    height: 0;
+    width: 0;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.logo > .aboutLogo {
+  display: flex;
+  flex-direction: column;
+  line-height: 14px;
+  z-index: 10;
+  margin-left: 40px;
+  animation: logoAni 2.6s ease-in-out 1.6s;
+}
+
+@keyframes logoAni {
+  0% {
+    opacity: 0;
+    margin-left: -84px;
+    margin-left: 0px;  
+}
+  100% {
+    margin-left: 0px;
+    opacity: 1;
+    margin-left: 40px;
+  }
+}
+
+.logoInitial{
+     display: initial;
+     top: 5px;
+     left: 0;
+     animation: logoAnim2 1.3s ease-in-out .6;
+}
+
+@keyframes logoAnim2 {
+     0%{
+       top: 50%;
+       left: 50%;
+     }100%{
+         top: 5px;
+         left: 0;
+     }
+}
+
+
+
+.topLeft {
+  display: flex;
+  gap: 10px;
+  margin-right: 0px;
+  align-items: center;
+  animation: topLeftAni 2.3s ease-in-out 1.5;
+}
+
+@keyframes topLeftAni {
+  0% {
+    margin-right: -200px;
+    opacity: 0;
+  }
+  100% {
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
+
+.text > p {
+  font-size: 13px;
+}
+.button {
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+.button > button {
+  font-family: "poppins";
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #9ca4b6;
+  outline: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  color: green;
+
+  transition: all 0.3s ease-in-out;
+}
+.model {
+  height: 200px;
+  /* width: auto; */
+  min-width: 250px;
+  background: #000;
+  position: absolute;
+  right: 40px;
+  top: 45px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  color: white;
+  padding: 10px 14px;
+  z-index: 20;
+}
+.model > h3 {
+  font-size: 16px;
+  margin-left: -6px;
+}
+.model > ul {
+  padding: 2px;
+  margin-top: 7px;
+}
+.model > ul > li {
+  /* margin-left: 10px; */
+  margin-bottom: 6px;
+  font-size: 13px;
+  list-style: none;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+}
+.button:hover .model {
+  visibility: visible;
+  opacity: 1;
+}
+.model > ul > li > span {
+  padding: 3px 7px;
+  background: white;
+  color: green;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+.formStart {
+  margin-top: 10px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  animation: formAni 1.8s ease-in-out 1.2s;
+}
+
+@keyframes formAni {
+  0% {
+    margin-top: 400px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+.form > h2 {
+  font-size: 35px;
+}
+.form > p {
+  font-size: 11px;
+}
+
+form {
+  margin-top: 20px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form_input {
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 2px;
+  position: relative;
+}
+
+.form_input > span {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+  color: gray;
+  pointer-events: none;
+}
+
+.form_input > input {
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  padding: 14px;
+  background: transparent;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.form_input.active {
+  border: 1px solid #64649c;
+}
+.form_input.active span {
+  top: 8px;
+  left: 10px;
+  font-size: 12px;
+}
+
+.form_input_checkBox {
+  width: 80%;
+  gap: 10px;
+  padding: 4px 10px;
+}
+.form_input_checkBox > input {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.form_input_checkBox > label {
+  cursor: pointer;
+}
+
+.buttonLogin {
+  margin-top: 20px;
+  width: 80%;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.buttonLogin .loginBtn {
+  font-size: 1.2rem;
+  padding: 10px;
+  width: 100%;
+  color: #fffcfc;
+  border: 1px solid #6c6b7c;
+  background: gray;
+  cursor: no-drop;
+  transition: all 0.3s ease-in-out;
+  font-family: "poppins";
+}
+
+.loginBtn.activeBtn {
+  background: #119011;
+  cursor: pointer;
+}
+
+.links {
+  width: 100%;
+  height: 10vh;
+  /* background: #34a618; */
+  /* position: absolute;
+    bottom: 0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.links_one, .links_two{
+    font-size: .7rem;
+    opacity: .7;
+}
+
+.links_two>span:nth-child(2){
+     color: green;
+}
+
+.right {
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+.right > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 0;
+  animation: rightPartAnim 0.9s ease-in-out 0.2s;
+}
+
+@keyframes rightPartAnim {
+  0% {
+    height: 0;
+    width: 0;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.smallImg {
+  width: 52vw;
+  height: 100%;
+  animation: smallWid 0.5s ease-in-out;
+}
+
+@keyframes smallWid {
+  0% {
+    width: 100vw;
+    height: 100%;
+  }
+  100% {
+    width: 52vw;
+    height: 100%;
+  }
+}
+
+.forgot{
+    width: 80%;
+    padding: 4px 3px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 13px;
+}
+.forgot>a{
+    color: green;
+    font-size: .7rem;
+    text-decoration: none;
+
+}
